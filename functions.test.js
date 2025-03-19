@@ -1,19 +1,27 @@
-const { add, subtract, divide, multiply } = require("./functions");
+const {
+  reverseString,
+  isPalindrome,
+  capitalize,
+  getInitials,
+} = require("./functions");
 
-describe("Math.js tests", () => {
-  it("should test  add  ", () => {
-    expect(add(2, 2)).toBe(4);
-  });
+test("reverseString reverses a string", () => {
+  expect(reverseString("hello")).toBe("olleh");
+  expect(reverseString("JavaScript")).toBe("tpircSavaJ");
+});
 
-  it("Should test subtract", () => {
-    expect(subtract(2, 2)).toBe(0);
-  });
+test("isPalindrome checks if a string is a palindrome", () => {
+  expect(isPalindrome("racecar")).toBe(true);
+  expect(isPalindrome("hello")).toBe(false);
+  expect(isPalindrome("A man, a plan, a canal, Panama")).toBe(true);
+});
 
-  it("Should test divide", () => {
-    expect(divide(2, 2)).toBe(1);
-  });
+test("capitalize capitalizes the first letter of a string", () => {
+  expect(capitalize("hello")).toBe("Hello");
+  expect(capitalize("javaSCRIPT")).toBe("Javascript");
+});
 
-  it("Should test multiply", () => {
-    expect(multiply(2, 2)).toBe(4);
-  });
+test("getInitials extracts initials from a name", () => {
+  expect(getInitials("John Doe")).toBe("JD");
+  expect(getInitials("Jane Ann Doe")).toBe("JAD");
 });
