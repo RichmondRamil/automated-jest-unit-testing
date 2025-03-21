@@ -28,6 +28,6 @@ test("getInitials extracts initials from a name", () => {
 });
 
 test("formatInitials returns initials with dots", () => {
-  expect(formatInitials("John Does WoWi Phillips")).toBe("j.d.w.p");
-  expect(formatInitials("Jane Anne Does Phillips")).toBe("j.a.d.p");
+  expect(formatInitials("John Does WoWi Phillips")).toBe("J.D.W.P");
+  expect(formatInitials("Jane Anne Does Phillips")).toBe("J.A.D.P");
 });
