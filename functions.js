@@ -8,6 +8,9 @@ module.exports = {
   getInitials: (name) =>
     name
       .split(" ")
-      .map((word) => word.charAt(0).toUpperCase())
+      .map((word) => word.charAt(0).toLowerCase())
       .join(""),
+  formatInitials: (name) => {
+    return module.exports.getInitials(name).split("").join(".");
+  },
 };
